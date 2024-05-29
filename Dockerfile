@@ -9,6 +9,7 @@ COPY ./pipelines/examples/langfuse_filter_pipeline.py ./pipelines/langfuse_filte
 COPY . .
 
 RUN pip3 install -r requirements.txt
+RUN pip3 install langfuse 
 
 ARG HOST="0.0.0.0"
 ARG PORT="9099"
