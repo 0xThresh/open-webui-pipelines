@@ -15,4 +15,4 @@ RUN pip3 install langfuse
 ARG HOST="0.0.0.0"
 ARG PORT="9099"
 
-ENTRYPOINT [ "./start.sh" ]
+ENTRYPOINT [ "/opt/pipelines/start.sh" ]
