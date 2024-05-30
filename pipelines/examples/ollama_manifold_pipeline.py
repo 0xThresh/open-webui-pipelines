@@ -38,6 +38,12 @@ class Pipeline:
         print(f"on_shutdown:{__name__}")
         pass
 
+    async def on_valves_update(self):
+        # This function is called when the valves are updated.
+        print(f"on_valves_update:{__name__}")
+        self.pipelines = self.get_ollama_models()
+        pass
+
     def get_ollama_models(self):
         if self.valves.OLLAMA_BASE_URL:
             try:
